@@ -31,7 +31,7 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
         _grid = transform.parent.GetComponent<Table>();
         for (int i = 0; i < size; i++)
         {
-            _grid._table[row + i, colomn]._block = this;
+            Table._table[row + i, colomn]._block = this;
         }
         _grid.Refresh();
     }
@@ -40,13 +40,13 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     {
         for (int i = 0; i < size; i++)
         {
-            _grid._table[row + i, colomn]._block = null;
-            _grid._table[row + i, colomn + 1]._line = null;
-            if (_grid._table[row + i, colomn + 1]._lineGO != null)
+            Table._table[row + i, colomn]._block = null;
+            Table._table[row + i, colomn + 1]._line = null;
+            if (Table._table[row + i, colomn + 1]._lineGO != null)
             {
-                Destroy(_grid._table[row + i, colomn + 1]._lineGO);
+                Destroy(Table._table[row + i, colomn + 1]._lineGO);
             }
-            _grid._table[row + i, colomn + 1]._lineGO = null;
+            Table._table[row + i, colomn + 1]._lineGO = null;
         }
     }
 

@@ -20,7 +20,7 @@ public class Table : MonoBehaviour
     [SerializeField]
     private int initCell;
 
-    public Cell[,] _table;
+    public static Cell[,] _table;
 
     private Cell _currentCell;
     private Cell _prevuousCell;
@@ -47,6 +47,26 @@ public class Table : MonoBehaviour
 
     public void Refresh()
     {
+        //удаляем все линии и цвета из таблицы нахуй
+        for (int i = 1; i < _size.colomn; i++)
+        {
+            for (int j = 0; j < _size.row; j++)
+            {
+                if (_table[j, i]._lineGO != null)
+                {
+                    Destroy(_table[j, i]._lineGO);
+                }
+
+                _table[j, i]._lineGO = null;
+                _table[j, i]._line = null;
+
+                _table[j, i]._sign = null; 
+            }
+        }
+
+        _table[initCell, 0].StartCell(StartSign); //устанавливаем стартовую клетку 
+        _table[initCell, 0].NewLine(0, initCell, transform);
+
         for (int i = 1; i < _size.colomn; i++)
         {
             for (int j = 0; j < _size.row; j++)
