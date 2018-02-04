@@ -54,7 +54,7 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
-        _blockGO.transform.position = eventData.position;
+        _block.transform.position = Input.mousePosition + new Vector3(-50f, _block.size * 100f, 0f);
     }
 
     #endregion
@@ -63,7 +63,6 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //_block = null;
         Vector2 blockPos = _blockGO.GetComponent<RectTransform>().anchoredPosition; 
         if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * _blockGO.GetComponent<Block>().size) && blockPos.y < 0f)
         {
@@ -81,10 +80,6 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             Destroy(_blockGO); 
         }
         GetComponent<CanvasGroup>().blocksRaycasts = (_count > 0);
-        /*if (_block.transform.parent == startParent)
-        {
-            _block.transform.position = startPosition;
-        }*/
     }
     #endregion
 }

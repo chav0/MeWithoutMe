@@ -95,7 +95,7 @@ public class Table : MonoBehaviour
     public void Recount(Cell cell, int colomn, int row)
     {
         cell._sign = new List<SignColor>();
-        Block block = cell._block; 
+        Block block = cell._block;
         if (block.type == BlockType.desintegration && block.output[row - block.row])
         {
             int inputCell = 0;
@@ -177,6 +177,7 @@ public class Table : MonoBehaviour
 
     public bool isWin()
     {
+        int circleCount = 0; 
         bool isOK = true;
         List<SignColor> exitColors = new List<SignColor>(); 
         for (int i = 0; i < _size.row; i++)
@@ -186,7 +187,8 @@ public class Table : MonoBehaviour
             SignColor start; 
             if (_currentCell._sign != null && _currentCell._sign.Count != 0)
             {
-                start = _currentCell._sign[0]; 
+                start = _currentCell._sign[0];
+                circleCount += _currentCell._sign.Count; 
                 for (int j = 1; j < _currentCell._sign.Count; j++)
                 {
                     if ((int)_currentCell._sign[j] != (int)start)
@@ -204,7 +206,7 @@ public class Table : MonoBehaviour
         if (isOK)
         {
             
-            if (exitColors.Count != colorCount)
+            if (exitColors.Count != colorCount || circleCount != StartSign.Count)
             {
                 isOK = false; 
             }
