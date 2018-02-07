@@ -12,7 +12,6 @@ public class Cell : MonoBehaviour
     public Line _line; 
     public List<SignColor> _sign; 
 
-    //На клетке может быть блок
     public Block _block;
 
     public void StartCell(List<SignColor> sign)

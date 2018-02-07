@@ -36,12 +36,14 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         _count++;
         _lblCount.text = _count.ToString();
+        GetComponent<CanvasGroup>().blocksRaycasts = (_count > 0);
     }
 
     public void decrement()
     {
         _count--;
         _lblCount.text = _count.ToString();
+        GetComponent<CanvasGroup>().blocksRaycasts = (_count > 0);
     }
 
     #region IBeginDragHandler implementation
@@ -65,7 +67,7 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         _block.transform.position = Input.mousePosition + new Vector3(-50f, _block.size * 100f, 0f);
         Vector2 blockPos = _blockRT.anchoredPosition;
-        if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * _blockGO.GetComponent<Block>().size) && blockPos.y < 0f)
+        if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * _block.size) && blockPos.y < 0f)
         {
             int cellX = (int)Mathf.Round(blockPos.x / 100f);
             int cellY = -(int)Mathf.Round(blockPos.y / 100f);
@@ -107,7 +109,7 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         Vector2 blockPos = _blockGO.GetComponent<RectTransform>().anchoredPosition;
 
-        if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * _blockGO.GetComponent<Block>().size) && blockPos.y < 0f && haveNoNaibours)
+        if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * _block.size) && blockPos.y < 0f && haveNoNaibours)
         {
             sound.Play();
             int cellX = (int)Mathf.Round(blockPos.x / 100f);
@@ -132,7 +134,7 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
             Destroy(_blockGO);
         }
-        GetComponent<CanvasGroup>().blocksRaycasts = (_count > 0);
+
     }
     #endregion
 }
