@@ -65,7 +65,8 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
-        _block.transform.position = Input.mousePosition + new Vector3(-50f, _block.size * 100f, 0f);
+        _block.transform.position = eventData.position; 
+        _blockRT.anchoredPosition += new Vector2(-50f, _block.size * 100f);
         Vector2 blockPos = _blockRT.anchoredPosition;
         if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * _block.size) && blockPos.y < 0f)
         {
@@ -133,6 +134,7 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 Table._table[oldCellY + i, oldCellX].transform.GetChild(0).gameObject.SetActive(false);
             }
             Destroy(_blockGO);
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
 
     }

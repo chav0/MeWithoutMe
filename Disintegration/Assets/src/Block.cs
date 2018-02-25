@@ -78,8 +78,9 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     public void OnDrag(PointerEventData eventData)
     {
-
-        transform.position = Input.mousePosition + new Vector3(-50f, size * 100f, 0f);
+        transform.position = eventData.position;
+        GetComponent<RectTransform>().anchoredPosition += new Vector2(-50f, size * 100f);
+        //transform.position = Input.mousePosition + new Vector3(-50f, size * 100f, 0f);
         Vector2 blockPos = GetComponent<RectTransform>().anchoredPosition;
         if (blockPos.x > 451f && blockPos.x < 2349f && blockPos.y > (-900f + 100f * size) && blockPos.y < 0f)
         {
