@@ -177,8 +177,9 @@ GameObject:
   - component: {fileID: 222242050806774256}
   - component: {fileID: 114888740158548194}
   - component: {fileID: 114979844691537824}
+  - component: {fileID: 114957169788207142}
   m_Layer: 5
-  m_Name: ButtonNextLevel
+  m_Name: btnNextLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2933,6 +2934,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114957169788207142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266190046409224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a395461fb1fe43b542434d5c2a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114957455712239040
 MonoBehaviour:
   m_ObjectHideFlags: 1

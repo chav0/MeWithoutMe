@@ -624,8 +624,9 @@ GameObject:
   - component: {fileID: 222285415283903428}
   - component: {fileID: 114067018434847508}
   - component: {fileID: 114946833097036276}
+  - component: {fileID: 114385571178348138}
   m_Layer: 5
-  m_Name: ButtonNextLevel
+  m_Name: btnNextLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,6 +1988,17 @@ MonoBehaviour:
     type: 2}
   _lblCount: {fileID: 114011410559205906}
   _blockGO: {fileID: 0}
+--- !u!114 &114385571178348138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735063709342514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a395461fb1fe43b542434d5c2a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114401040057199126
 MonoBehaviour:
   m_ObjectHideFlags: 1

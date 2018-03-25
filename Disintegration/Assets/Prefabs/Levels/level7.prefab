@@ -613,8 +613,9 @@ GameObject:
   - component: {fileID: 222591898486312328}
   - component: {fileID: 114146183387653210}
   - component: {fileID: 114673476090351724}
+  - component: {fileID: 114777677077345836}
   m_Layer: 5
-  m_Name: ButtonNextLevel
+  m_Name: btnNextLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2833,6 +2834,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114777677077345836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670107118914924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a395461fb1fe43b542434d5c2a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114780630565268560
 MonoBehaviour:
   m_ObjectHideFlags: 1

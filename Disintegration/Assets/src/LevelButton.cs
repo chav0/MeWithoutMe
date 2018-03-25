@@ -16,7 +16,7 @@ public class LevelButton : MonoBehaviour {
     public bool isAccept;
     private bool updated;
 
-    private static int ads = 0; 
+    public static int ads = 0; 
 
 	// Use this for initialization
 	void Awake () {
