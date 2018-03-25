@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Advertisements; 
 
 public class LevelButton : MonoBehaviour {
 
@@ -13,7 +14,9 @@ public class LevelButton : MonoBehaviour {
     public Color colorDone; 
     public Button btn;
     public bool isAccept;
-    private bool updated; 
+    private bool updated;
+
+    private static int ads = 0; 
 
 	// Use this for initialization
 	void Awake () {
@@ -31,10 +34,19 @@ public class LevelButton : MonoBehaviour {
             circle.raycastTarget = true;
             btn.onClick.AddListener(TaskOnClick);
         }
+
+        if (Advertisement.isSupported)
+            Advertisement.Initialize("1715105", false);
     }
 
     void TaskOnClick()
     {
+        if (Advertisement.IsReady() && (ads + 1) % 3 == 0)
+        {
+            Advertisement.Show();
+
+        }
+        ads++;
         levels.NextLevel(level); 
     }
 

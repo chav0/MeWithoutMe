@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 114148807884739196}
   - component: {fileID: 114820342965558364}
   - component: {fileID: 82138066166791346}
+  - component: {fileID: 114998567153208574}
   m_Layer: 5
   m_Name: ButtonPause
   m_TagString: Untagged
@@ -235,6 +236,7 @@ GameObject:
   - component: {fileID: 114439620970077592}
   - component: {fileID: 114244913099909214}
   - component: {fileID: 82199648960367354}
+  - component: {fileID: 114196517148149920}
   m_Layer: 5
   m_Name: ButtonReload
   m_TagString: Untagged
@@ -292,7 +294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1320960096001750
 GameObject:
   m_ObjectHideFlags: 1
@@ -1204,7 +1206,7 @@ Animator:
   m_GameObject: {fileID: 1412263322861324}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ed2962537166fe4199da5054a138cd3, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1730,6 +1732,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114196517148149920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225674083604880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c0b3118beef924c92642bf6f1c3877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114204990165810762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1769,7 +1782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.6156863, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.011764706}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2021,8 +2034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 0, b: 0.6156863, a: 1}
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2733,6 +2746,17 @@ MonoBehaviour:
     type: 2}
   initCell: 3
   buttonNextLevel: {fileID: 1340399318622508}
+--- !u!114 &114998567153208574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086403704323350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c0b3118beef924c92642bf6f1c3877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222023702754833772
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -3206,8 +3230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: 0, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224289122035912252
 RectTransform:
@@ -3633,8 +3657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 150}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224748774561977306
 RectTransform:

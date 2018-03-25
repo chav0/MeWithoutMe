@@ -40,7 +40,7 @@ public class Table : MonoBehaviour
             }
         }
         _table[initCell, 0].StartCell(StartSign); //устанавливаем стартовую клетку 
-        _table[initCell, 0].NewLine(0, initCell, transform); 
+        //_table[initCell, 0].NewLine(0, initCell, transform); 
         Refresh();
     }
 
