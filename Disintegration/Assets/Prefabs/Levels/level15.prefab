@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 82645305134109744}
-  _count: 5
+  _count: 3
   _filtrePrefab: {fileID: 1319253295803022, guid: 119996b3ca2cb7249a21aebcabf9d63e,
     type: 2}
   _lblCount: {fileID: 114078401366170686}
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 82655107432036172}
-  _count: 5
+  _count: 4
   _filtrePrefab: {fileID: 1615086656485284, guid: c7a78ab7b118180469867302a2749ad9,
     type: 2}
   _lblCount: {fileID: 114381988599773348}
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 82477668492720850}
-  _count: 5
+  _count: 3
   _filtrePrefab: {fileID: 1699725585274010, guid: 098085c3400d86a429852c6ef6082e10,
     type: 2}
   _lblCount: {fileID: 114042929749437186}
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 82407034900839590}
-  _count: 5
+  _count: 4
   _filtrePrefab: {fileID: 1055348153619374, guid: fd0ecc7b99e6b6e4ba7631bdd3179df6,
     type: 2}
   _lblCount: {fileID: 114544381476832710}
@@ -4021,8 +4021,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 201.59998, y: -150.09998}
-  m_SizeDelta: {x: 171.19995, y: 172}
+  m_AnchoredPosition: {x: 302.9, y: -150.09998}
+  m_SizeDelta: {x: 373.7, y: 172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224644907233716158
 RectTransform:

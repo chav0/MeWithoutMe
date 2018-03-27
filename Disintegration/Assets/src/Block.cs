@@ -65,7 +65,6 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     {
         startPosition = GetComponent<RectTransform>().anchoredPosition;
         oldBlockGO = Instantiate(gameObject, transform.parent);
-        oldBlockGO.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
         for (int i = 0; i < oldBlockGO.transform.childCount; i++)
         {
             oldBlockGO.transform.GetChild(i).GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
@@ -92,6 +91,7 @@ public class Block : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
             for (int i = 0; i < size; i++)
             {
                 haveNoNaibours = haveNoNaibours && Table._table[cellY + i, cellX - 1]._block == null;
+                haveNoNaibours = haveNoNaibours && Table._table[cellY + i, cellX]._block == null;
                 haveNoNaibours = haveNoNaibours && Table._table[cellY + i, cellX + 1]._block == null;
             }
 

@@ -24,6 +24,7 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     private int oldCellX = 0;
     private int oldCellY = 0;
+
     bool haveNoNaibours; 
 
     private void Awake()
@@ -78,8 +79,10 @@ public class ButtonFiltre : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             for (int i = 0; i < _block.size; i++)
             {
                 haveNoNaibours = haveNoNaibours && Table._table[cellY + i, cellX - 1]._block == null;
+                haveNoNaibours = haveNoNaibours && Table._table[cellY + i, cellX]._block == null;
                 haveNoNaibours = haveNoNaibours && Table._table[cellY + i, cellX + 1]._block == null;
             }
+
 
 
             if ((cellX != oldCellX || cellY != oldCellY) && haveNoNaibours)

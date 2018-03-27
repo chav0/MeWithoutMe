@@ -159,7 +159,7 @@ public class Table : MonoBehaviour
         else
         if (block.type == BlockType.integration && block.output[row - block.row])
         {
-            int outputCell = row - block.row; 
+            int outputCell = row - block.row;
             List<Cell> inputCells = new List<Cell>(); 
             for (int j = 0; j < block.size; j++)
             {
